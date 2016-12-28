@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_web_socket"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.violinsolo.myapplicationtest.WebSocketActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Message Received:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvMsgReceivedLbl" />
+
+        <TextView
+            android:text="NULL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvMsgReceived"
+            android:textAlignment="center"
+            android:textStyle="normal|bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etMsgContent"
+            android:hint="Msg Type Here.."
+            android:text="ws://192.168.1.1:8000/" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Connect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnConnect"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="DIsconnect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnDisconnect"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <Button
+            android:text="Send Message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSendMsg"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3" />
+
+            <Button
+                android:text="Open"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnOpen"
+                android:textSize="36sp"
+                android:textStyle="normal|bold"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_open_bg_selector"
+                android:textColor="@android:color/white" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3" />
+
+            <Button
+                android:text="Close"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnClose"
+                android:textSize="36sp"
+                android:textStyle="normal|bold"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_close_bg_selector"
+                android:textColor="@android:color/white" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
